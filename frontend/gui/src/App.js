@@ -1,6 +1,7 @@
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomLayout from './components/CustomLayout'
+import './styles/base.css';
 // import PostListView from './containers/PostListView'
 
 

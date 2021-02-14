@@ -8,6 +8,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 
 import Header from './Header';
 import PostList from './PostList';
+import Search from './Search';
 
 class CustomLayout extends React.Component  {
  state = {
@@ -28,20 +29,7 @@ class CustomLayout extends React.Component  {
     return (
       <div>
         <Header title={title} user={user}/>
-          <Container>
-            <Row className="justify-content-md-center">
-                <Jumbotron>
-                  <Container>
-                    <h1>Fluid jumbotron</h1>
-                    <p>
-                      This is a modified jumbotron that occupies the entire horizontal space of
-                      its parent.
-                    </p>
-                  </Container>
-                </Jumbotron>
-            </Row>
-          </Container>
-
+        <Search />
           <div className="content">
             <Container>
                 <Row className="justify-content-md-center">
