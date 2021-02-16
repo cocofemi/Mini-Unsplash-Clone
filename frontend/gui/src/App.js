@@ -1,15 +1,16 @@
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CustomLayout from './components/CustomLayout'
 import './styles/base.css';
-// import PostListView from './containers/PostListView'
+import './App.css';
+
+import LoginPage from './components/LoginPage';
 
 
 function App() {
   return (
     <div className="App">
-      <CustomLayout>
-      </CustomLayout>
+      <LoginPage>
+      </LoginPage>
     </div>
   );
 }

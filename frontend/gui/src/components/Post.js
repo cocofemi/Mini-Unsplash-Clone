@@ -16,15 +16,9 @@ const Post = (props) => {
 	return (
 		    <>
 		      <Container>
-		      {props.results}
 				  <Row>
 				    <Col onClick={handleShow}>
 				      <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-				      <Card.ImgOverlay style={{marginTop:"100px"}}>
-					    <Card.Text 
-					    	style={{fontSize:"larger", fontWeight: "Bold", color: "white"}}>
-					    	{props.articleData.author} <br /> {props.articleData.caption} </Card.Text>
-					  </Card.ImgOverlay>
 				    </Col>
 				  </Row>
 				</Container>
@@ -33,14 +27,16 @@ const Post = (props) => {
 		      	show={show} 
 		      	onHide={handleClose}
 		      	centered>
-			        <Card className="bg-dark text-white">
-				  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-				  <Card.ImgOverlay style={{marginTop:"200px"}}>
-				    <Card.Text
-				    style={{fontSize:"larger", fontWeight: "Bold", color: "white"}}>
-				    {props.articleData.author} <br/> {props.articleData.caption}</Card.Text>
-				  </Card.ImgOverlay>
-				</Card>
+		      	<Modal.Body>
+				      <Card className="bg-dark text-white">
+					  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
+					  <Modal.Footer>
+			        	<Card.Text
+					    style={{color: "white"}}>
+					    {props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}</Card.Text>
+			      </Modal.Footer>
+					</Card>
+				</Modal.Body>
 		      </Modal>
 		    </>
 		);
