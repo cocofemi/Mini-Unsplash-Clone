@@ -33,3 +33,17 @@
 //        </div>
 //        );
 // }
+
+const Product = (props) => {
+     const card = (<Card>
+        <Card.Body>
+          <Card.Title>{props.name}</Card.Title>
+          <Card.Text>
+            Quantity : {props.quantity}
+          </Card.Text>
+          <Card.Title>{props.price}</Card.Title>
+            <Button variant="primary">View Product</Button>
+        </Card.Body>
+      </Card>)
+  return card;
+}

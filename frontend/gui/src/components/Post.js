@@ -14,26 +14,33 @@ const Post = (props) => {
 	  return cache
 	}
 	return (
-
 		    <>
 		      <Container>
+		      {props.results}
 				  <Row>
 				    <Col onClick={handleShow}>
 				      <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
+				      <Card.ImgOverlay style={{marginTop:"100px"}}>
+					    <Card.Text 
+					    	style={{fontSize:"larger", fontWeight: "Bold", color: "white"}}>
+					    	{props.articleData.author} <br /> {props.articleData.caption} </Card.Text>
+					  </Card.ImgOverlay>
 				    </Col>
 				  </Row>
 				</Container>
 
-		      <Modal show={show} onHide={handleClose}>
-		        <Modal.Body>
+		      <Modal 
+		      	show={show} 
+		      	onHide={handleClose}
+		      	centered>
 			        <Card className="bg-dark text-white">
 				  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-				  <Card.ImgOverlay>
-				    <Card.Title style={{marginTop:"100px"}}>{props.articleData.caption}</Card.Title>
-				    <Card.Text>{props.articleData.author}</Card.Text>
+				  <Card.ImgOverlay style={{marginTop:"200px"}}>
+				    <Card.Text
+				    style={{fontSize:"larger", fontWeight: "Bold", color: "white"}}>
+				    {props.articleData.author} <br/> {props.articleData.caption}</Card.Text>
 				  </Card.ImgOverlay>
 				</Card>
-		        </Modal.Body>
 		      </Modal>
 		    </>
 		);

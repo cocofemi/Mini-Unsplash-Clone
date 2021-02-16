@@ -4,15 +4,14 @@ import {Container, Row, Col, Form, Button} from 'react-bootstrap';
 const Search = (props) => {
 	return (
 			<div style={{backgroundColor: "#343a40", height: "200px"}}>
-				<Row className="justify-content-center">
+				<Row xs={2} md={2} className="justify-content-center">
 					<Form inline className="align-items-center" style={{marginTop: "100px"}}>
-						  <Form.Control size="lg" 
+						  <Form.Control 
+						  	onChange={props.handleChange}
+						  	size="lg" 
 						  	type="text" 
-						  	placeholder="Search for photos by username, caption or category " 
-						  	style={{marginRight: "20px", width:"500px"}} />
-						  <Button type="submit" className="mb-2" size="lg" style={{marginTop: "8px"}}>
-						     Submit
-						      </Button>
+						  	placeholder="Search for photos by username or category " 
+						  	style={{width:"600px"}} />
 						</Form>
 				</Row>
 			</div>

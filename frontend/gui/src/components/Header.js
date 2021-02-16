@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Upload from './Upload';
+import {Modal, Button} from 'react-bootstrap';
 
 const Header = (props) => {
 	return (
@@ -11,7 +12,7 @@ const Header = (props) => {
 		  <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
 		  <Navbar.Toggle />
 		  <Navbar.Collapse className="justify-content-end">
-		  <Upload />
+		  <Upload></Upload>
 		    <Navbar.Text>
 		      Signed in as: <a href="#login">{props.user}</a>
 		    </Navbar.Text>
