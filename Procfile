@@ -1,2 +1,2 @@
 release: python manage.py makemigrations
-web: gunicorn djreact.wsgi:application --log-file -
+web: gunicorn mini_unsplash_clone.wsgi:application --log-file -

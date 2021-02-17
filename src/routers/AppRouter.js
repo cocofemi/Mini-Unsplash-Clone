@@ -9,7 +9,7 @@ const AppRouter = () => {
 	<div>
 		<Switch>
 		<Route path="/" component={LoginPage} exact={true}/>
-		<Route path="/home" component={CustomLayout} exact={true}/>
+		<Route path="/home" component={CustomLayout}/>
 		<Route component={NotFoundPage} />
 		</Switch>
 	</div>

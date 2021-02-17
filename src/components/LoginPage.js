@@ -21,7 +21,7 @@ class LoginPage extends Component {
 			<p style={{textAlign:"center", color:"white"}}>Its time to put your best pictures online.</p>
 			<Col style={{ marginLeft:"6px"}}>
 		        <GoogleLogin 
-		          clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID"
+		          clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
 		          buttonText="LOGIN WITH GOOGLE"
 		          onSuccess={responseGoogle}
 		          onFailure={responseGoogle}
