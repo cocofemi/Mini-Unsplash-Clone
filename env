@@ -3,3 +3,5 @@ REACT_APP_GOOGLE_CLIENT_ID = 203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.
 export cloud_name = dhchzkdbz
 export api_key = 881267154389753
 export api_secret = 0PUxrK_GVFH5oxJkRkcCb3OUEQU
+
+export SECRET_KEY = _z%(@*j8ukj80fc&-7in$9ju3qk=pwlzdutqt*phi2e^4nv7m*

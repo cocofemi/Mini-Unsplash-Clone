@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import cloudinary
 import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_z%(@*j8ukj80fc&-7in$9ju3qk=pwlzdutqt*phi2e^4nv7m*'
+SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -157,7 +158,7 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 cloudinary.config(
-    cloud_name = os.getenv("cloud_name"),
-    api_key = os.getenv("api_key"),
-    api_secret = os.getenv("api_secret")
+    cloud_name = str(os.getenv("cloud_name")),
+    api_key = str(os.getenv("api_key")),
+    api_secret = str(os.getenv("api_secret"))
 )

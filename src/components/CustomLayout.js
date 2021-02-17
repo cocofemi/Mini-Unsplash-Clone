@@ -10,7 +10,7 @@ import Header from './Header';
 import PostList from './PostList';
 import Search from './Search';
 
-class CustomLayout extends React.Component  {
+export class CustomLayout extends React.Component  {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
