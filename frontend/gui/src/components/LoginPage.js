@@ -25,6 +25,7 @@ class LoginPage extends Component {
 		          buttonText="LOGIN WITH GOOGLE"
 		          onSuccess={responseGoogle}
 		          onFailure={responseGoogle}
+		          redirectUri={"http://localhost:300/home/"}
 		        />
 	        </Col>
         </div>

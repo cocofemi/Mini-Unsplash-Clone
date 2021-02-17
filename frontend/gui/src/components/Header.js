@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Upload from './Upload';
+import LogoutPage from './LogoutPage';
 import {Modal, Button} from 'react-bootstrap';
 
 const Header = (props) => {
@@ -14,7 +15,7 @@ const Header = (props) => {
 		  <Navbar.Collapse className="justify-content-end">
 		  <Upload></Upload>
 		    <Navbar.Text>
-		      Signed in as: <a href="#login">{props.user}</a>
+		      <LogoutPage />
 		    </Navbar.Text>
 		  </Navbar.Collapse>
 		</Navbar>

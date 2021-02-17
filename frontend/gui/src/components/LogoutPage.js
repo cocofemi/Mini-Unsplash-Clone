@@ -1,15 +1,15 @@
 import React from 'react';
 import { GoogleLogout } from 'react-google-login';
 
-class LogoutPage = () => {
+const LogoutPage = () => {
 	return(
 		<GoogleLogout
-		  clientId=""
+		  clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
 		  buttonText="Logout"
-		  onLogoutSuccess={logout}
+		  
 		>
 		</GoogleLogout>
-		)
+	);
 };
 
 

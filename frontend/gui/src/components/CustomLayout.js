@@ -55,10 +55,9 @@ class CustomLayout extends React.Component  {
 
   render () {
     const title = 'Mini Unsplash Clone';
-    const user = 'Mark Smith II';
     return (
       <div>
-        <Header title={title} user={user}/>
+        <Header title={title} />
         <Search handleChange={this.handleChange}/>
           <div className="content">
             <Container>
