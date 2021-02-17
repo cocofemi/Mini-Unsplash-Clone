@@ -18,6 +18,8 @@ from django.urls import path, include, re_path
 from posts.views import GoogleLogin
 from django.views.generic import TemplateView
 
+from . import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('/', include('posts.urls')),
@@ -25,4 +27,5 @@ urlpatterns = [
     path('api/', include('posts.api.urls')),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
     re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+    re_path(r'', views.catchall)
 ]
