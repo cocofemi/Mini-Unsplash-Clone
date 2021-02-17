@@ -15,20 +15,20 @@ class LoginPage extends Component {
 
     return (
     <div className="login-container">
-      <Row className="justify-content-md-center align-items-center h-100">
-      <div>
+      <Row className="justify-content-md-center">
+      <Col>
 	      <h1 className="" style={{textAlign:"center", color:"white"}}>Mini Unsplash Clone</h1>
-			<p style={{textAlign:"center", color:"white"}}>Its time to post your best pictures online.</p>
+			<p style={{textAlign:"center", color:"white"}}>Its time to put your best pictures online.</p>
 			<Col style={{ marginLeft:"6px"}}>
 		        <GoogleLogin 
-		          clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
+		          clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID"
 		          buttonText="LOGIN WITH GOOGLE"
 		          onSuccess={responseGoogle}
 		          onFailure={responseGoogle}
-		          redirectUri={"http://localhost:300/home/"}
+		          redirectUri="http://localhost:300/home/"
 		        />
 	        </Col>
-        </div>
+        </Col>
       </Row>
     </div>
     );

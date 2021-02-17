@@ -27,16 +27,14 @@ const Post = (props) => {
 		      	show={show} 
 		      	onHide={handleClose}
 		      	centered>
-		      	<Modal.Body>
-				      <Card className="bg-dark text-white">
-					  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-					  <Modal.Footer>
-			        	<Card.Text
-					    style={{color: "white"}}>
-					    {props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}</Card.Text>
-			      </Modal.Footer>
-					</Card>
-				</Modal.Body>
+			      <Card className="bg-dark text-white">
+				  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
+				  <Modal.Footer>
+		        	<Card.Text
+				    style={{color: "white"}}>
+				    {props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}</Card.Text>
+		      </Modal.Footer>
+				</Card>
 		      </Modal>
 		    </>
 		);

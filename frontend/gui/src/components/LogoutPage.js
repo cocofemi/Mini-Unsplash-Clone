@@ -4,9 +4,10 @@ import { GoogleLogout } from 'react-google-login';
 const LogoutPage = () => {
 	return(
 		<GoogleLogout
-		  clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
+		  clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID"
 		  buttonText="Logout"
-		  
+		  // onLogoutSuccess={logout}
+		  redirectUri="http://localhost:300/"
 		>
 		</GoogleLogout>
 	);

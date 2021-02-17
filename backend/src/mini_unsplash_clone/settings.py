@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import cloudinary
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -70,7 +71,7 @@ ROOT_URLCONF = 'mini_unsplash_clone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,6 +137,11 @@ USE_TZ = True
 SITE_ID = 1
 
 STATIC_URL = '/static/'
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'build/static'), 
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -145,11 +151,10 @@ REST_FRAMEWORK = {
     ]
 }
 
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 cloudinary.config(
-    cloud_name = "dhchzkdbz",
-    api_key = "881267154389753",
-    api_secret = "0PUxrK_GVFH5oxJkRkcCb3OUEQU"
+    cloud_name = os.getenv("cloud_name"),
+    api_key = os.getenv("api_key"),
+    api_secret = os.getenv("api_secret")
 )

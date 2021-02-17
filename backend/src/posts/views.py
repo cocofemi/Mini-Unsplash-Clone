@@ -4,5 +4,8 @@ from rest_auth.registration.views import SocialLoginView
 
 # Create your views here.
 
+def index(request):
+	return render(request, 'index.html', context=context)
+
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
