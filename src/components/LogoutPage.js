@@ -6,7 +6,7 @@ const LogoutPage = () => {
 		<GoogleLogout
 		  clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID"
 		  buttonText="Logout"
-		  // onLogoutSuccess={logout}
+		  onLogoutSuccess={response() => {this.state(() => { return {isLoggedIn: false} }) }}
 		  redirectUri="http://localhost:300/"
 		>
 		</GoogleLogout>
