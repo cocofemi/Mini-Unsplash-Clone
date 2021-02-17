@@ -27,7 +27,7 @@ SECRET_KEY = '_z%(@*j8ukj80fc&-7in$9ju3qk=pwlzdutqt*phi2e^4nv7m*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['unsplash-clone-project.herokuapp.com']
 
 
 # Application definition
