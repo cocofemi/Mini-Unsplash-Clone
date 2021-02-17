@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { GoogleLogout } from 'react-google-login';
 
-const LogoutPage = () => {
+class LogoutPage extends Component {
+	Constructor(props){
+		super(props)
+	}
+	this.state {
+		isLoggedIn: false
+	}
 	return(
 		<GoogleLogout
 		  clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID"
