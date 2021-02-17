@@ -11,7 +11,7 @@ import NotFoundPage from './components/NotFoundPage';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/static">
 			<div>
 				<Switch>
 				<Route exact path="/" component={LoginPage} />
