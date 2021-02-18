@@ -15,8 +15,10 @@ import cloudinary
 import os
 from dotenv import load_dotenv
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
+import django_heroku
+
+# import mimetypes
+# mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -171,3 +173,5 @@ cloudinary.config(
     api_key = '881267154389753',
     api_secret = '0PUxrK_GVFH5oxJkRkcCb3OUEQU'
 )
+
+django_heroku.settings(locals())
