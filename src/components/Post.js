@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Modal, Button, Card, Col, Row, Container, Image} from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton';
 
 const Post = (props) => {
 
@@ -15,7 +16,7 @@ const Post = (props) => {
 	}
 	return (
 		    <>
-		      <Container>
+		      <Container className="post-container">
 				  <Row>
 				    <Col onClick={handleShow}>
 				      <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
@@ -29,9 +30,9 @@ const Post = (props) => {
 		      	centered>
 			      <Card className="bg-dark text-white">
 				  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-				  <Modal.Footer>
+				  <Modal.Footer style={{backgroundColor:'white'}}>
 		        	<Card.Text
-				    style={{color: "white"}}>
+				    style={{color: "black"}}>
 				    {props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}</Card.Text>
 		      </Modal.Footer>
 				</Card>

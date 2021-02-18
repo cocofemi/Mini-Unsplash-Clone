@@ -28,7 +28,7 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['unsplash-clone-project.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,7 +76,11 @@ ROOT_URLCONF = 'mini_unsplash_clone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [
+                    os.path.join(BASE_DIR, 'build'),
+                    os.path.join(BASE_DIR, 'staticfiles')
+
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

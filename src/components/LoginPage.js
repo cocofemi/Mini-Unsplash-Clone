@@ -4,7 +4,6 @@ import {Container, Row, Col} from 'react-bootstrap';
 import googleLogin from "../services/googleLogin";
 
 class LoginPage extends Component {
-
   render() {
 
   	const responseGoogle = async(response) => {
@@ -12,7 +11,6 @@ class LoginPage extends Component {
       console.log(googleResponse);
       console.log(response);
     }
-
     return (
     <div className="login-container">
       <Row className="justify-content-md-center">
@@ -22,10 +20,11 @@ class LoginPage extends Component {
 			<Col style={{ marginLeft:"6px"}}>
 		        <GoogleLogin 
 		          clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
-              buttonText="LOGIN WITH GOOGLE"
+		          buttonText="LOGIN WITH GOOGLE"
 		          onSuccess={responseGoogle}
 		          onFailure={responseGoogle}
-		          redirectUri="http://localhost:300/home/"
+              uxMode="redirectUri"
+		          redirec="http://localhost:3000/home/"
 		        />
 	        </Col>
         </Col>

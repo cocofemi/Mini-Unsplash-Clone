@@ -21,6 +21,11 @@ const Upload = (props) => {
 		        <Modal.Body>
 		        	<UploadForm />
 		        </Modal.Body>
+		        
+		        	<Button variant="danger" type="submit" onClick={handleClose}>
+					 Cancel
+					</Button>
+		       
 		      </Modal>
 		    </>
 		);

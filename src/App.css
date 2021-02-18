@@ -40,10 +40,22 @@
 .login-container {
     position: relative;
     top: 50%;
-    transform: translateY(270px);
+    overflow: hidden;
+    background: url('./images/black-background.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
+.post-container{
+  overflow: hidden;
+}
 
-body{
+/*body{
   background-color: black;
+}*/
+
+.card {
+  border: 0px;
 }

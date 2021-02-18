@@ -17,7 +17,6 @@ export class CustomLayout extends React.Component  {
     this.state = {
         articles : [],
         searchResult: []
-
      };
   }
 

@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/', include('posts.api.urls')),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
     re_path(r'.*', TemplateView.as_view(template_name='index.html')),
+    re_path('home/', TemplateView.as_view(template_name='index.html')),
 ]

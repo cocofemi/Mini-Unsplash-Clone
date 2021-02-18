@@ -13,8 +13,9 @@ const PostList = (props) => {
 	const articlesCols = articleChunk.map((articles, index) => {
 		return (
 			<Col xs={12} md={4} lg={4} style={{marginTop:"10px"}}  key={articles.id}>
+			<Skeleton height={200} width={320} />
 				<Post key={index} 
-				articleData={articles || <Skeleton />} />
+				articleData={articles} />
 				</Col>
 			);
 		})	
@@ -26,7 +27,7 @@ const PostList = (props) => {
 			{rows}
 			</Container>
 	);
-		{this.props.results.map(result => <Post results = {result}/>)}
+		// {this.props.results.map(result => <Post results = {result}/>)}
 }
 
 export default PostList;
