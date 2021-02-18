@@ -47,3 +47,5 @@ const Product = (props) => {
       </Card>)
   return card;
 }
+
+<Skeleton height={200} width={320} />
