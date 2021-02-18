@@ -30,11 +30,11 @@ const Post = (props) => {
 		      	centered>
 			      <Card className="bg-dark text-white">
 				  <Card.Img src={`http://res.cloudinary.com/dhchzkdbz/${props.articleData.image}`} alt="Card image" />
-				  <Modal.Footer style={{backgroundColor:'white'}}>
-		        	<Card.Text
-				    style={{color: "black"}}>
-				    {props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}</Card.Text>
-		      </Modal.Footer>
+				  <Card.Body style={{backgroundColor:'white'}}>
+					  <Card.Text style={{color: "black"}}>
+					    	{props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}
+					    </Card.Text>
+				</Card.Body>
 				</Card>
 		      </Modal>
 		    </>
