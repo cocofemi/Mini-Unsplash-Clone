@@ -1,5 +1,7 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import LoginPage from '../components/LoginPage';
 import CustomLayout from '../components/CustomLayout';
 import NotFoundPage from '../components/NotFoundPage';
@@ -9,8 +11,8 @@ const AppRouter = () => {
 		<Router>
 			<div>
 				<Switch>
-				<Route exact path="/" component={LoginPage} />
-				<Route exact path="/home" component={CustomLayout}/>
+				<PublicRoute path="/" component={LoginPage} exact={true}/>
+				<PrivateRoute path="/home" component={CustomLayout}/>
 				<Route component={NotFoundPage} />
 				</Switch>
 			</div>

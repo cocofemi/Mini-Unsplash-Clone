@@ -49,3 +49,14 @@ const Product = (props) => {
 }
 
 <Skeleton height={200} width={320} />
+
+
+<GoogleLogin 
+              clientId="203425879861-duk66q8klnol7iojm19ppqks85v3hud5.apps.googleusercontent.com"
+              buttonText="LOGIN WITH GOOGLE"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              isSignedIn={true}
+              uxMode="redirect"
+              redirectUri="http://localhost:3000/home/"
+            />

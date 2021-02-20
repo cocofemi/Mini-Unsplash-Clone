@@ -12,7 +12,7 @@ const PostList = (props) => {
 	const rows = articlesChunks.map((articleChunk, index) => {
 	const articlesCols = articleChunk.map((articles, index) => {
 		return (
-			<Col xs={12} md={4} lg={4} style={{marginTop:"10px"}}  key={articles.id}>
+			<Col xs={12} md={4} lg={4} style={{marginTop:"10px"}}  key={index}>
 				<Post key={index} 
 				articleData={articles} />
 				</Col>

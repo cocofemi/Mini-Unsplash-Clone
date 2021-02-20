@@ -18,10 +18,16 @@ from django.urls import path, include, re_path
 from posts.views import GoogleLogin
 from django.views.generic import TemplateView
 
+
+"""Rest Auth and google rest auth urls are defined and called 
+    Also template views url for react router is defined to help with page navigation
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('/', include('posts.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('api/', include('posts.api.urls')),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
     re_path(r'.*', TemplateView.as_view(template_name='index.html')),

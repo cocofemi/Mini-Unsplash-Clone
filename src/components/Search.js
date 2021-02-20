@@ -11,7 +11,7 @@ const Search = (props) => {
 							  	onChange={props.handleChange}
 							  	size="lg" 
 							  	type="text" 
-							  	placeholder="Search for photos by username or category " 
+							  	placeholder="Search for photos by category i.e Nature, Adventure, Lifestyle" 
 							  	style={{width:"600px"}} />
 							</Form>
 					</Col>

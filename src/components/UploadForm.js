@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {Form, Button} from 'react-bootstrap';
 import UploadPreview from './UploadPreview';
+import {withRouter} from 'react-router';
 
 class UploadForm extends React.Component {
 
@@ -17,8 +18,6 @@ class UploadForm extends React.Component {
 			category : category
 		})
 		.then(res => console.log(res))
-		
-
 		console.log(image, caption, category)
 	}
 	render () {
@@ -43,4 +42,4 @@ class UploadForm extends React.Component {
 	}
 };
 
-export default UploadForm;
+export default withRouter(UploadForm);
