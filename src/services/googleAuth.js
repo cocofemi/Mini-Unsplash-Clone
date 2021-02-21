@@ -6,7 +6,7 @@ const GoogleAuthContext = React.createContext()
 export const GoogleAuthProvider = ({ children }) => {
   const googleAuth = useGoogleLogin({
     clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID, // Your clientID from Google.
-  })
+  });
 
   return (
     <GoogleAuthContext.Provider value={googleAuth}>
