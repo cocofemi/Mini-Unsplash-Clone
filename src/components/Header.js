@@ -13,7 +13,7 @@ const Header = (props) => {
 		  <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
 		  <Navbar.Toggle />
 		  <Navbar.Collapse className="justify-content-end">
-		  <Upload></Upload>
+		  <Upload />
 		    <Navbar.Text>
 		      <LogoutPage />
 		    </Navbar.Text>

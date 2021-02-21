@@ -9,6 +9,7 @@ import Post from './Post';
 
 const PostList = (props) => {
 	const articlesChunks = chunk(props.articles, 3)
+	{ props.articles.length === 0 && <h2>Click the submit button above to get started</h2> }
 	const rows = articlesChunks.map((articleChunk, index) => {
 	const articlesCols = articleChunk.map((articles, index) => {
 		return (

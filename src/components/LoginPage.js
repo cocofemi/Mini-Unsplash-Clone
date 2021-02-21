@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { GoogleLogin } from 'react-google-login';
-import {Container, Row, Col, Button} from 'react-bootstrap';
+import { Row, Col, Button} from 'react-bootstrap';
 // import googleLogin from "../services/googleLogin";
 import { useGoogleAuth } from "../services/googleAuth";
 

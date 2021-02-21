@@ -7,7 +7,7 @@ import {withRouter} from 'react-router';
 class UploadForm extends React.Component {
 
 	handleSubmitForm = (e, requestType) => {
-		e.preventDefault();
+		
 		const image = e.target.elements.image.value;
 		const caption = e.target.elements.caption.value;
 		const category = e.target.elements.category.value;
@@ -35,6 +35,9 @@ class UploadForm extends React.Component {
 				   </Form.Group>
 				   <Button variant="primary" type="submit">
 					 Upload
+					</Button>
+					<Button style={{ marginLeft: "10px" }}variant="danger" onClick={this.props.handleClose}>
+					 	Close
 					</Button>
 			</Form>
 		</div>

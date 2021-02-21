@@ -169,9 +169,9 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 cloudinary.config(
-    cloud_name = 'dhchzkdbz',
-    api_key = '881267154389753',
-    api_secret = '0PUxrK_GVFH5oxJkRkcCb3OUEQU'
+    cloud_name = str(os.getenv("cloud_name")),
+    api_key = str(os.getenv("api_key")),
+    api_secret = str(os.getenv("api_secret"))
 )
 
 django_heroku.settings(locals())
