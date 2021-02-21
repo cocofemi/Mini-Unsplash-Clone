@@ -1,6 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/base.css';
-import './App.css';
+
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
