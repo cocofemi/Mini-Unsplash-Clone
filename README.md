@@ -11,3 +11,19 @@ A web application for users to share their best photos on the web.
 # Usage
 
 Clone repository 
+git@github.com:cocofemi/Mini-Unsplash-Clone.git
+
+Install Node dependencies
+run npm i om install nodejs dependecies
+
+Install Python and django dependencies
+run pip install -r requirements.txt to install python and django dependencies 
+
+run npm start to start frond end client side
+visit LocalHost:3000
+
+run python mamange.py to run server side django
+visit localhost:8000
+
+
+
