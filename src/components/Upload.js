@@ -19,7 +19,7 @@ const Upload = (props) => {
 		          <Modal.Title>Upload a new Photo</Modal.Title>
 		        </Modal.Header>
 		        <Modal.Body>
-		        	<UploadForm handleClose={handleClose}/>
+		        	<UploadForm handleClose={handleClose} handleSubmitForm={props.handleSubmitForm} />
 		        </Modal.Body>      
 		      </Modal>
 		    </>

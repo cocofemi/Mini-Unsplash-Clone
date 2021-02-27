@@ -5,9 +5,13 @@ import UploadPreview from './UploadPreview';
 import {withRouter} from 'react-router';
 
 class UploadForm extends React.Component {
+	constructor(props){
+		super(props);
+		this.handleSubmitForm = this.handleSubmitForm.bind(this);
+	}
 
 	handleSubmitForm = (e, requestType) => {
-		e.preventDefault()
+		// e.preventDefault()
 
 		const image = e.target.elements.image.files[0];
 		const caption = e.target.elements.caption.value;
@@ -28,6 +32,10 @@ class UploadForm extends React.Component {
 			console.log(res.data);
 		})
 		.catch(err => console.log(err))
+
+		if (form_data) {
+			this.props.handleSubmitForm(form_data)
+		};
 	};
 
 	render () {

@@ -37,7 +37,7 @@ const Post = (props) => {
 				  <Card.Img src={imageSource} alt="Card image" />
 				  <Card.Body style={{backgroundColor:'white'}}>
 					  <Card.Text style={{color: "black"}}>
-					    	{props.articleData.caption} <br/> <br/> <p style={{fontWeight:"Bold"}}>Category:</p> {props.articleData.category}
+					    	{props.articleData.caption} <br/> <br/> <span style={{fontWeight:"Bold"}}>Category:</span> {props.articleData.category}
 					    </Card.Text>
 				</Card.Body>
 				</Card>

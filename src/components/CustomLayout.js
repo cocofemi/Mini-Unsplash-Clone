@@ -14,6 +14,7 @@ export class CustomLayout extends React.Component  {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmitForm = this.handleSubmitForm.bind(this);
     this.state = {
         articles : [],
         searchResult: []
@@ -42,6 +43,14 @@ export class CustomLayout extends React.Component  {
       });
   }
 
+  handleSubmitForm(article) {
+      this.setState((prevState) =>{
+        return {
+          articles: prevState.articles.concat(article)
+        }
+      });
+  };
+
   componentDidMount() {
     axios.get('http://127.0.0.1:8000/api/')
       .then(res => {
@@ -57,7 +66,7 @@ export class CustomLayout extends React.Component  {
     const title = 'Mini Unsplash Clone';
     return (
       <div>
-        <Header title={title} />
+        <Header title={title} handleSubmitForm={this.handleSubmitForm}/>
         <Search handleChange={this.handleChange}/>
           <div className="content">
             <Container>
