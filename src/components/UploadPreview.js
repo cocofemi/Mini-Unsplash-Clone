@@ -18,7 +18,7 @@ class UploadPreview extends React.Component {
   	return (
   		<>
   			<Form.Group>
-				<Form.File name="image" id="exampleFormControlFile1" label="Upload a new photo" onChange={this.onChange} />
+				<Form.File name="image" id="image" label="Upload a new photo" onChange={this.onChange} />
 			</Form.Group>
 		    <img style={{ width: "50%" }} src={this.state.file} />
 		</>

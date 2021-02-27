@@ -28,8 +28,9 @@ export class CustomLayout extends React.Component  {
       articlesList = this.state.searchResult
       newSearch = articlesList.filter(article => {
         const category = article.category.toLowerCase();
+        const caption = article.caption.toLowerCase();
         const filter = e.target.value.toLowerCase();
-        return category.includes(filter);
+        return category.includes(filter) || caption.includes(filter);
       });
       // If the search bar is empty, set newList to original task list
       } else {

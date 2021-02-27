@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Modal, Button, Card, Col, Row, Container, Image, CardDeck} from 'react-bootstrap';
+import {Modal, Button, Card, Col, Row, Container, Image, CardColumns} from 'react-bootstrap';
 import Skeleton from 'react-loading-skeleton';
 
 const Post = (props) => {
@@ -22,9 +22,9 @@ const Post = (props) => {
 		      <Container className="post-container">
 				  <Row>
 				    <Col onClick={handleShow}>
-				    <CardDeck>
-				      <Card.Img src={imageSource} alt="Card image" />
-				     </CardDeck>
+				    <CardColumns>
+				      <Card.Img style={{height:"230px", width: "320px"}} src={imageSource} alt="Card image" />
+				     </CardColumns>
 				    </Col>
 				  </Row>
 				</Container>

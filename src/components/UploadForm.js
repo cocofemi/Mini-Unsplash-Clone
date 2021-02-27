@@ -7,19 +7,29 @@ import {withRouter} from 'react-router';
 class UploadForm extends React.Component {
 
 	handleSubmitForm = (e, requestType) => {
-		
-		const image = e.target.elements.image.value;
+		e.preventDefault()
+
+		const image = e.target.elements.image.files[0];
 		const caption = e.target.elements.caption.value;
 		const category = e.target.elements.category.value;
 
-		axios.post('http://127.0.0.1:8000/api/create/',{
-			image : image,
-			caption : caption,
-			category : category
+		let form_data = new FormData();
+		form_data.append('image', image);
+		form_data.append('caption', caption);
+		form_data.append('category', category);
+
+		let url = 'http://127.0.0.1:8000/api/create/';
+
+		axios.post(url, form_data, {
+		 headers: {
+	        'content-type': 'multipart/form-data'
+	      }
+		}).then(res => {
+			console.log(res.data);
 		})
-		.then(res => console.log(res))
-		console.log(image, caption, category)
-	}
+		.catch(err => console.log(err))
+	};
+
 	render () {
 		return(
 		<div>
@@ -33,11 +43,8 @@ class UploadForm extends React.Component {
 					 <Form.Label style={{fontWeight:"Bold"}}>Category</Form.Label>
 					 <Form.Control name="category" type="text" placeholder="i.e Nature, Lifstyle, City, Sports, Adventure e.t.c" />
 				   </Form.Group>
-				   <Button variant="primary" type="submit">
+				   <Button variant="primary" type="submit" onClick={this.props.handleClose}>
 					 Upload
-					</Button>
-					<Button style={{ marginLeft: "10px" }}variant="danger" onClick={this.props.handleClose}>
-					 	Close
 					</Button>
 			</Form>
 		</div>

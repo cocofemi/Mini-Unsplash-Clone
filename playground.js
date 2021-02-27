@@ -60,3 +60,30 @@ const Product = (props) => {
               uxMode="redirect"
               redirectUri="http://localhost:3000/home/"
             />
+
+
+                # return Response({
+    #   'status':'success',
+    #   'data': upload_data,
+    #   }, status=201) 
+
+  # def perform_create(self, serializer):
+  #   serializer.save(author=self.request.user)
+
+  # def create(self, request, *args, **kwargs):
+  #   serializer = self.get_serializer(data=request.data)
+  #   serializer.is_valid(raise_exception=True)
+  #   upload_data = cloudinary.uploader.upload(request.FILES['image'])
+  #   self.perform_create(upload_data)
+  #   headers = self.get_success_headers(serializer.data)
+  #   return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+  # def create(self, request, *args, **kwargs):
+  #   # post = Post(author=self.request.user)
+  #   serializer = self.serializer_class(post, data=request.data)
+  #   if serializer.is_valid():
+  #     self.upload_image_cloudinary(request, request.FILES['image'])
+  #     serializer.save()
+  #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+  #   else:
+  #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

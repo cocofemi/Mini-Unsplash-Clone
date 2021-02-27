@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
 import CustomLayout from './components/CustomLayout';
