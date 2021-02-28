@@ -7,10 +7,12 @@ import Header from  '../components/Header';
 const PrivateRoute = ({component: Component, ...rest}) =>  {
 	const { isSignedIn } = useGoogleAuth();
 
+	//Persist user login and avoid login page reload
+	const isAuth = localStorage.getItem('isAuth')
 	return(
 		<div>
 			<Route {...rest} render={props => (
-                isSignedIn ?
+                isAuth ?
                 <Component {...props} />: 
                 <Redirect exact from="/home" to="/" />
             )} />
