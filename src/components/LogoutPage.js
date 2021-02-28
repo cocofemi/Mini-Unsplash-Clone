@@ -7,8 +7,13 @@ import { useGoogleAuth } from "../services/googleAuth";
 const LogoutPage = () => {
 	const { signOut } = useGoogleAuth();
 
+	const handleRequest = async () => {
+	   const googleUser = await signOut();
+	   localStorage.removeItem('isAuth')
+	}
+
 	return(
-		<Button variant="danger" onClick={signOut}>Logout</Button>
+		<Button variant="danger" onClick={handleRequest}>Logout</Button>
 	);
 };
 
