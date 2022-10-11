@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'mini_unsplash_clone'
     'rest_framework',
     'corsheaders',
     'posts',
